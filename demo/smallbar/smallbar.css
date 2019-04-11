@@ -1,0 +1,152 @@
+/* THEME */
+:root {
+    --smallbar-background       : #424242;
+    --smallbar-color            : rgba(255, 255, 255, .9);
+    --smallbar-hover-background : rgba(255, 255, 255, .1);
+    --smallbar-easing           : cubic-bezier(0.4, 0.0, 0.2, 1);
+    --smallbar-width            : 4rem;
+    --smallbar-nav-padding      : 1rem;
+    --smallbar-top              : 0;
+    --smallbar-font-size        : 1em;
+}
+
+#smallbar:hover,
+#smallbar.open,
+#smallbar:hover + main,
+#smallbar.open + main {
+    --smallbar-width : 16rem;
+}
+
+/* THEME AUTOMATION */
+:root {
+    --smallbar-icon-width         : var(--smallbar-width);
+    --smallbar-subnav-height      : auto;
+    --smallbar-subnav-height-full : auto;
+}
+
+/* STYLES */
+#smallbar {
+    position   : fixed;
+    top        : var(--smallbar-top);
+    left       : 0;
+    min-height : 100vh;
+    height     : 100%;
+    background : var(--smallbar-background);
+    z-index    : 100;
+    font-size  : var(--smallbar-font-size);
+    overflow-x : hidden;
+    overflow-y : auto;
+    box-sizing : border-box;
+}
+
+#smallbar + main {
+    margin-left : var(--smallbar-width);
+    transition  : margin-left .1s var(--smallbar-easing);
+}
+
+#smallbar nav {
+    transition : width .1s var(--smallbar-easing);
+    width      : var(--smallbar-width);
+    height     : 100%;
+}
+
+#smallbar ul {
+    padding          : 0;
+    margin           : 0;
+    list-style-image : none;
+}
+
+#smallbar ul li {
+    overflow   : hidden;
+    color      : var(--smallbar-color);
+    box-sizing : border-box;
+    transition : background-color .05 var(--smallbar-hover-background);
+}
+
+#smallbar nav ul li:last-child {
+    margin-bottom : calc(2 * var(--smallbar-nav-padding) + var(--smallbar-font-size));
+}
+
+#smallbar ul li .link-content:hover {
+    background : var(--smallbar-hover-background);
+}
+
+#smallbar ul li a.link-content {
+    text-decoration : none;
+    color           : var(--smallbar-color);
+}
+
+#smallbar ul li .link-content {
+    display     : flex;
+    align-items : center;
+    padding     : var(--smallbar-nav-padding) 0;
+}
+
+#smallbar ul li .link-content .text,
+#smallbar ul li .link-content .icon {
+}
+
+#smallbar ul li .link-content .text {
+    overflow      : hidden;
+    text-overflow : ellipsis;
+    white-space   : nowrap;
+    flex-shrink   : 1;
+}
+
+#smallbar ul li .link-content .icon.last {
+    margin-left : auto;
+    transition  : transform .1s var(--smallbar-easing);
+}
+
+#smallbar ul li:hover .link-content .icon.last,
+#smallbar.open ul li .link-content .icon.last {
+    transform : rotate(-90deg);
+}
+
+#smallbar ul li .link-content .icon {
+    display         : flex;
+    justify-content : center;
+    flex-shrink     : 0;
+    width           : var(--smallbar-icon-width);
+}
+
+#smallbar ul li ul.subnav {
+    margin-left : var(--smallbar-icon-width);
+    height      : var(--smallbar-subnav-height);
+    transition  : height .1s var(--smallbar-easing);
+}
+
+#smallbar.open ul li ul.subnav,
+#smallbar ul li:hover ul.subnav {
+    height : var(--smallbar-subnav-height-full);
+}
+
+#smallbar ul li ul.subnav .icon {
+    display : none;
+}
+
+#smallbar ul li ul.subnav .text {
+    padding-left : var(--smallbar-nav-padding);
+}
+
+#smallbar ul.bottom-fixed {
+    position   : fixed;
+    bottom     : 0;
+    left       : 0;
+    width      : var(--smallbar-width);
+    background : var(--smallbar-background);
+    transition : width .1s var(--smallbar-easing);
+}
+
+#smallbar ul.bottom-fixed .opener .icon {
+    transition  : margin-left .1s var(--smallbar-easing);
+    margin-left : 0;
+}
+
+#smallbar.open ul.bottom-fixed .opener .icon {
+    margin-left : calc(var(--smallbar-width) - var(--smallbar-icon-width));
+}
+
+#smallbar.open ul.bottom-fixed .opener .text {
+    display : none;
+}

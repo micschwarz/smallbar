@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Smallbar</title>
+
+    <link rel="stylesheet" href="./fontawesome/css/regular.min.css">
+    <link rel="stylesheet" href="./fontawesome/css/solid.min.css">
+    <link rel="stylesheet" href="./fontawesome/css/fontawesome.min.css">
+
+    <link rel="stylesheet" href="./smallbar/smallbar.css"/>
+    <script src="./smallbar/smallbar.js"></script>
+    <style>
+        body {
+            margin      : 0;
+            padding     : 0;
+            font-family : sans-serif;
+        }
+
+        main {
+            padding         : 15px;
+            display         : flex;
+            justify-content : center;
+            align-items     : center;
+            flex-direction  : column;
+            box-sizing      : border-box;
+        }
+
+        main h1 {
+            margin : 0;
+        }
+
+        main h2,
+        main h3 {
+            margin : 5px 0;
+        }
+
+        .demo {
+            margin-right: 10px;
+            animation: demo 1s ease-in-out infinite;
+        }
+
+        @keyframes demo {
+            0% {
+                transform: translateX(0);
+            }
+            50% {
+                transform: translateX(-10px);
+            }
+            100% {
+                transform: translateX(0px);
+            }
+        }
+    </style>
+</head>
+<body>
+<aside id="smallbar">
+    <nav>
+        <ul>
+            <li>
+                <a href="#" class="link-content">
+                    <div class="icon">
+                        <i class="far fa-file"></i>
+                    </div>
+                    <div class="text">
+                        Dummy Link 1
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="link-content">
+                    <div class="icon">
+                        <i class="far fa-calendar-alt"></i>
+                    </div>
+                    <div class="text">
+                        Dummy Link 2
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="link-content">
+                    <div class="icon">
+                        <i class="fas fa-list"></i>
+                    </div>
+                    <div class="text">
+                        Dummy Subnavigation
+                    </div>
+                    <div class="icon last">
+                        <i class="fas fa-chevron-left"></i>
+                    </div>
+                </a>
+                <ul class="subnav">
+                    <li>
+                        <a href="#" class="link-content">
+                            <div class="icon">
+                                <i class="fas fa-list"></i>
+                            </div>
+                            <div class="text">
+                                Dummy Sublink 1
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="link-content">
+                            <div class="icon">
+                                <i class="fas fa-list"></i>
+                            </div>
+                            <div class="text">
+                                Dummy Sublink 2
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#" class="link-content">
+                    <div class="icon">
+                        <i class="far fa-comment"></i>
+                    </div>
+                    <div class="text">
+                        Dummy Link 3
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="bottom-fixed">
+        <li>
+            <div class="link-content opener">
+                <div class="icon">
+                    <i class="fas fa-thumbtack"></i>
+                </div>
+            </div>
+        </li>
+    </ul>
+</aside>
+<main>
+    <h1>Smallbar</h1>
+    <h2>With Font Awesome Icons</h2>
+    <h3><i class="fas fa-arrow-left demo"></i>Demo on the left side</h3>
+    <div>
+
+    </div>
+</main>
+</body>
+</html>
