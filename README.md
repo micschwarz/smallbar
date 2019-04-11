@@ -3,6 +3,9 @@ Simple, fast and small navigation sidebar
 
 ![Smallbar](./doc/smallbar_icon.png "Smallbar Icon")
 
+## Demo
+Have a look here: [smallbar.micschwarz.dev](https://smallbar.micschwarz.dev/)
+
 ## Usage
 ### Main Structure
 1. Load both `smallbar.css` and `smallbar.js` in your html-document
