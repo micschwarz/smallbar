@@ -26,17 +26,17 @@
 
 /* STYLES */
 #smallbar {
-    position       : fixed;
-    top            : var(--smallbar-top);
-    left           : 0;
-    min-height     : 100vh;
-    height         : 100%;
-    background     : var(--smallbar-background);
-    z-index        : 100;
-    font-size      : var(--smallbar-font-size);
-    overflow-x     : hidden;
-    overflow-y     : scroll;
-    box-sizing     : border-box;
+    position   : fixed;
+    top        : var(--smallbar-top);
+    left       : 0;
+    min-height : 100vh;
+    height     : 100%;
+    background : var(--smallbar-background);
+    z-index    : 100;
+    font-size  : var(--smallbar-font-size);
+    overflow-x : hidden;
+    overflow-y : auto;
+    box-sizing : border-box;
 }
 
 #smallbar + main {
@@ -64,7 +64,7 @@
 }
 
 #smallbar nav ul li:last-child {
-    margin-bottom: calc(2 * var(--smallbar-nav-padding) + var(--smallbar-font-size));
+    margin-bottom : calc(2 * var(--smallbar-nav-padding) + var(--smallbar-font-size));
 }
 
 #smallbar ul li .link-content:hover {
@@ -90,6 +90,17 @@
     overflow      : hidden;
     text-overflow : ellipsis;
     white-space   : nowrap;
+    flex-shrink   : 1;
+}
+
+#smallbar ul li .link-content .icon.last {
+    margin-left : auto;
+    transition  : transform .1s var(--smallbar-easing);
+}
+
+#smallbar ul li:hover .link-content .icon.last,
+#smallbar.open ul li .link-content .icon.last {
+    transform : rotate(-90deg);
 }
 
 #smallbar ul li .link-content .icon {
@@ -124,6 +135,7 @@
     left       : 0;
     width      : var(--smallbar-width);
     background : var(--smallbar-background);
+    transition : width .1s var(--smallbar-easing);
 }
 
 #smallbar ul.bottom-fixed .opener .icon {
