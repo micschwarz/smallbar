@@ -71,6 +71,6 @@ There ar two types of links: Normal links and links with a sublist
 ## Compatibility
 As smallbar makes heavy use of CSS-Variables, browser support of CSS-Variables is a must. 
 
-![Chrome](https://raw.github.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png "Chrome") | ![Firefox](https://raw.github.com/alrra/browser-logos/master/src/firefox/firefox_48x48.png "Firefox") | ![IE](https://raw.github.com/alrra/browser-logos/master/src/archive/internet-explorer_9-11/internet-explorer_9-11_48x48.png "IE") | ![Edge](https://raw.github.com/alrra/browser-logos/master/src/edge/edge_48x48.png "Edge") | ![Safari](https://raw.github.com/alrra/browser-logos/master/src/safari/safari_48x48.png "Safari")| ![Safari iOS](https://raw.github.com/alrra/browser-logos/master/src/safari-ios/safari-ios_48x48.png "Safari iOS")
---- | --- | --- | --- | --- | --- |
-18 ✔ | 66+ ✔ | none ❌ | 16+ ✔ | 10+ ✔ | 10+ ✔ |
+![Chrome](https://raw.github.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png "Chrome") | ![Firefox](https://raw.github.com/alrra/browser-logos/master/src/firefox/firefox_48x48.png "Firefox") | ![Edge](https://raw.github.com/alrra/browser-logos/master/src/edge/edge_48x48.png "Edge") | ![Safari](https://raw.github.com/alrra/browser-logos/master/src/safari/safari_48x48.png "Safari")| ![Safari iOS](https://raw.github.com/alrra/browser-logos/master/src/safari-ios/safari-ios_48x48.png "Safari iOS")
+--- | --- | --- | --- | --- |
+18 ✔ | 66+ ✔ | 16+ ✔ | 10+ ✔ | 10+ ✔ |
